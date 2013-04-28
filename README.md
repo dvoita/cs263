@@ -1,8 +1,5 @@
-cs263
-=====
-
 cs263 Class Project: Webbots with Ruby and Mechanize
--------
+=====
 
 Resources
 -------
