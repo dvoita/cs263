@@ -5,7 +5,6 @@ Resources
 -------
 
 Video Tutorial: TBA
-
 Class Presentation: TBA
 
 Mechanize: http://mechanize.rubyforge.org
