@@ -5,6 +5,7 @@ Resources
 -------
 * Video Tutorial: TBA  
 * Class Presentation: TBA
+* Docs: https://cs263-class-project.readthedocs.org/en/latest/  
 * Mechanize: http://mechanize.rubyforge.org
 * Nokogiri: http://nokogiri.org
 * Ruby Version Manager(RVM): https://rvm.io/
