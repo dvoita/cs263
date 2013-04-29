@@ -105,3 +105,18 @@ Note, if you have problems installing these gems, it could be due to missing
 header files on your system.  To resolve these problems, it is usually a 
 matter of installing the packages that supply the header files and trying 
 again. As usual, Google is your best bet.
+
+Running the Examples 
+....................
+
+To run the examples, copy them to your machine.  You can either do::
+
+    $ ruby example.rb
+
+Or::
+
+    $ chmod 750 example.rb
+    $ ./example.rb
+
+It is really a matter of choice.
+
