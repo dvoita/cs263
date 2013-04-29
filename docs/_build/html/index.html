@@ -57,9 +57,69 @@
 <ul class="simple">
 </ul>
 </div>
+</div>
+<div class="section" id="installation-notes">
+<h2>Installation Notes<a class="headerlink" href="#installation-notes" title="Permalink to this headline">¶</a></h2>
+<p><strong>Software Used</strong></p>
 <ul class="simple">
-<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+<li>OS Fedora 18</li>
+<li>Ruby 1.9.3p392 (2013-02-22 revision 39386) [x86_64-linux]</li>
+<li>RVM (1.19.6 stable)</li>
+<li>Mechanize (2.6.0)</li>
+<li>Nokogiri (1.5.9)</li>
 </ul>
+<p>To install Ruby, you can use your system&#8217;s Package Management
+tool. I am using Fedora 18 Linux, so am using Yum.  The command looks like this:</p>
+<div class="highlight-python"><pre>$ sudo yum install ruby ruby-devel gcc libxml2 libxml2-devel libxslt libxslt-devel</pre>
+</div>
+<p>To make working with Ruby easier, I recommend using RVM, the Ruby
+enVironment Manager.  RVM is a great tool for managing multiple Ruby
+environments.  With RVM it is easy to setup different projects to
+use different versions of Ruby and different gem sets.  I will not
+go into great detail here, as using RVM is not necessary to try my
+examples. But I will cover how to get up and running with or without RVM.</p>
+<p>First, without RVM, you can simply use your system&#8217;s Package Manager to do the following:</p>
+<div class="highlight-python"><pre>$ sudo yum install rubygem-mechanize rubygem-nokogiri rubygem-mail</pre>
+</div>
+<p>All done.</p>
+<p>So why bother with RVM?  If you only plan on using one version of Ruby
+and one set of gems, you are fine.  However, say you are also developing
+another application on the same system and it happens to use a different
+version of Ruby.  Now you have the kind of problem that RVM was designed to solve.
+To install it, do the following.  You will need sudo access on the machine,
+(so this will not work for you on machines in CSIL.):</p>
+<div class="highlight-python"><pre>$ \curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby</pre>
+</div>
+<p>Once this is done, you will need to do:</p>
+<div class="highlight-python"><pre>$ source /local/don/.rvm/scripts/rvm
+$  type rvm | head -1     # The result should show'rvm is a function'</pre>
+</div>
+<p>I added the following to my <em>.bashrc</em> file to source <em>~/.rvm/scripts/rvm</em> when I login:</p>
+<div class="highlight-python"><pre>[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm" # Load RVM function</pre>
+</div>
+<p>If everything works to this point, then doing the following will list which Rubies you have available:</p>
+<div class="highlight-python"><pre>$ rvm list</pre>
+</div>
+<p>On my machine, I do not see version 1.9.3, but that is the version I want to use. So I run:</p>
+<div class="highlight-python"><pre>$ rvm install 1.9.3
+$ rvm use 1.9.3</pre>
+</div>
+<p>Now you are ready to install the Mechanize and Nokogiri gems.  If you did not
+know their exact names, you can list any remotely available gems by running:</p>
+<div class="highlight-python"><pre>$ gem list --remote</pre>
+</div>
+<p>Now do:</p>
+<div class="highlight-python"><pre>$ gem install mechanize
+$ gem install nokogiri
+$ gem install mail      # Used in one of my examples.</pre>
+</div>
+<p>Now you are ready to use Ruby, Mechanize, and Nokogiri.  In one of my
+example scripts, I use the Mail gem to add the ability to send the results
+of a web query via email, so I added it for good measure.</p>
+<p>Note, if you have problems installing these gems, it could be due to missing
+header files on your system.  To resolve these problems, it is usually a
+matter of installing the packages that supply the header files and trying
+again. As usual, Google is your best bet.</p>
 </div>
 </div>
 
@@ -75,6 +135,7 @@
 <li><a class="reference internal" href="#resources">Resources</a><ul>
 </ul>
 </li>
+<li><a class="reference internal" href="#installation-notes">Installation Notes</a></li>
 </ul>
 </li>
 </ul>
