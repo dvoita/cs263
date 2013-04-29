@@ -19,7 +19,7 @@ Resources
 
 * Nokogiri: http://nokogiri.org
 
-* Ruby Version Manager(RVM): https://rvm.io/
+* Ruby enVironment Manager(RVM): https://rvm.io/
 
 .. toctree::
    :maxdepth: 2
