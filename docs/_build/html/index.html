@@ -104,6 +104,10 @@ $  type rvm | head -1     # The result should show'rvm is a function'</pre>
 <div class="highlight-python"><pre>$ rvm install 1.9.3
 $ rvm use 1.9.3</pre>
 </div>
+<p>This will set the version for the current session.  If you want to use this version
+every time you log in, set it as default:</p>
+<div class="highlight-python"><pre>$ rvm --default use 1.9.3</pre>
+</div>
 <p>Now you are ready to install the Mechanize and Nokogiri gems.  If you did not
 know their exact names, you can list any remotely available gems by running:</p>
 <div class="highlight-python"><pre>$ gem list --remote</pre>

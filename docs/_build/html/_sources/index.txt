@@ -86,6 +86,12 @@ On my machine, I do not see version 1.9.3, but that is the version I want to use
     $ rvm install 1.9.3
     $ rvm use 1.9.3
 
+This will set the version for the current session.  If you want to use this version 
+every time you log in, set it as default::
+
+    $ rvm --default use 1.9.3
+
+
 Now you are ready to install the Mechanize and Nokogiri gems.  If you did not 
 know their exact names, you can list any remotely available gems by running::
 
