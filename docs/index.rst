@@ -11,7 +11,7 @@ cs263 Class Project Docs
 Resources
 ..........
 
-* Video Tutorial: TBA  
+* Video Tutorial: http://www.youtube.com/watch?v=07VMzwOvyTQ
 
 * Class Presentation: TBA
 

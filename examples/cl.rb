@@ -23,10 +23,10 @@ class CLSearch
 
   def send_results(results)
     mail = Mail.new do
-      to 'you@somewhere'
-      from 'you@somewhere'
+      to 'don@cs.ucsb.edu'
+      from 'don@cs.ucsb.edu'
       content_type 'text/html'
-      charset 'UTF-8'
+      charset = 'UTF-8'
       subject 'search results'
       body results
     end

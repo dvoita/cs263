@@ -3,7 +3,7 @@ cs263 Class Project: Webbots with Ruby and Mechanize
 
 Resources
 -------
-* Video Tutorial: TBA  
+* Video Tutorial: http://www.youtube.com/watch?v=07VMzwOvyTQ  
 * Class Presentation: TBA
 * Docs: https://cs263-class-project.readthedocs.org/en/latest/  
 * Mechanize: http://mechanize.rubyforge.org
